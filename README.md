@@ -24,3 +24,4 @@ Tag line - which one conveys the idea best?
 * Refreshes folders of plain-text lists to match your evolving rules
 * Synchs folders of plain-text lists to match your evolving rules
 * Tweaks folders of plain-text lists in synch with evolving content rules
+* Running mklists for the first time will generate a default configuration file, .mklistsrc
