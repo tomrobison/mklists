@@ -1,0 +1,1 @@
+2013-01 MKLISTS SHUFFLE re.compile so that rule can search for filename '_[A-Z]'

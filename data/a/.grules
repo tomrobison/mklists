@@ -1,0 +1,10 @@
+2|^~/|lines.tmp|huh.tmp|
+2|^irc:|lines.tmp|huh.tmp|
+2|^http:|lines.tmp|huh.tmp|
+2|^https:|lines.tmp|huh.tmp|
+0|.|huh.tmp|lines|
+0|.|lines.tmp|lines|
+0|.|lines.tmp|dataa|
+1|^http|lines|datab|
+0|^d 20|lines|datab|
+0|^2013-.. |lines|datac|
