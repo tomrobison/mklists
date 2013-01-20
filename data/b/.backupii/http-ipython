@@ -1,4 +1,7 @@
+http://ipython.org/ipython-doc/                                                - MKLISTS.IPYTHON
+http://ipython.org/                                                            - MKLISTS.IPYTHON
 http://ipython.org/ipython-doc/dev/development/ipythonzmq.html                 - MKLISTS.IPYTHON
+http://ipython.org/ipython-doc/dev/interactive/htmlnotebook.html               - MKLISTS.IPYTHON
 http://ipython.org/ipython-doc/dev/interactive/qtconsole.html                  - MKLISTS.IPYTHON
 http://ipython.org/ipython-doc/dev/interactive/shell.html                      - MKLISTS.IPYTHON
 http://ipython.scipy.org/moin/                                                 - MKLISTS.IPYTHON
@@ -9,22 +12,24 @@ http://mail.scipy.org/mailman/listinfo/ipython-user                            -
 http://mail.scipy.org/pipermail/ipython-user/                                  - MKLISTS.IPYTHON - MAILING LIST - USER ARCHIVES
 http://pages.physics.cornell.edu/~myers/teaching/ComputationalMethods/python/ipython.html - MKLISTS.IPYTHON
 http://philips-tips.blogspot.com/2012/01/fun-with-vim-and-ipython-kernel.html  - MKLISTS.IPYTHON
+http://pythonadventures.wordpress.com/tag/ipdb/                - MKLISTS.IPYTHON
 http://qt-project.org/wiki/PySide_Binaries_MacOSX                              - MKLISTS.IPYTHON
 http://showmedo.com/videos/ipython                                             - MKLISTS.IPYTHON
-http://showmedo.com/videotutorials/                                            - MKLISTS.IPYTHON - 1: tabs, namespace, logging, help, introspection
-http://showmedo.com/videotutorials/                                            - MKLISTS.IPYTHON - 2: dir navigatn, shell commands, running programs
-http://showmedo.com/videotutorials/                                            - MKLISTS.IPYTHON - 3: history, macros, storing, editing, logging
-http://showmedo.com/videotutorials/                                            - MKLISTS.IPYTHON - 4: debugging/profiling, executing in background...
-http://showmedo.com/videotutorials/                                            - MKLISTS.IPYTHON - 5: input filtering...
 http://showmedo.com/videotutorials/series?name=CnluURUTV                       - MKLISTS.IPYTHON
 http://showmedo.com/videotutorials/series?name=PythonIPythonSeries             - MKLISTS.IPYTHON
+http://showmedo.com/videotutorials/video?name=1000010&fromSeriesID=100         - MKLISTS.IPYTHON - 1: tabs, namespace, logging, help, introspection
+http://showmedo.com/videotutorials/video?name=1000020&fromSeriesID=100         - MKLISTS.IPYTHON - 2: dir navigatn, shell commands, running programs
 http://showmedo.com/videotutorials/video?name=1000030&fromSeriesID=100         - MKLISTS.IPYTHON
+http://showmedo.com/videotutorials/video?name=1000030&fromSeriesID=100         - MKLISTS.IPYTHON - 3: history, macros, storing, editing, logging
+http://showmedo.com/videotutorials/video?name=1000040&fromSeriesID=100         - MKLISTS.IPYTHON - 4: debugging/profiling, executing in background...
+http://showmedo.com/videotutorials/video?name=1000050&fromSeriesID=100         - MKLISTS.IPYTHON - 5: input filtering...
 http://video.google.com/videoplay?docid=2025411588241625522                    - MKLISTS.IPYTHON
 http://vim.wikia.com/wiki/IPython_integration                                  - MKLISTS.IPYTHON
 http://wiki.ipython.org/Cookbook                                               - MKLISTS.IPYTHON
 http://www.onlamp.com/pub/a/python/2005/01/27/ipython.html                     - MKLISTS.IPYTHON
 http://www.pythonanywhere.com/try-ipython/                                     - MKLISTS.IPYTHON
 http://www.youtube.com/watch?v=FAGb_qasXBE                                     - MKLISTS.IPYTHON
+http://www.youtube.com/watch?v=bZZTeKPRSLQ                                     - MKLISTS.IPYTHON
 http://ipython.org/ipython-doc/rel-0.12.1/index.html                           - MKLISTS.IPYTHON- documentation of version 0.12.1
 http://mail.scipy.org/pipermail/ipython-user/2009-November/006675.html         - MKLISTS.IPYTHON- uses Eclipse and PyDev
 http://pry.github.com/                                                         - MKLISTS.IPYTHON.PRY Interactive Ruby shell, like iPython

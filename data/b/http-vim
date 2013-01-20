@@ -14,6 +14,8 @@ http://www.moolenaar.net/habits.html                                         - M
 http://www.oac.uci.edu/indiv/gdh/vi/                                         - MKLISTS.VIM 
 http://www.oreillynet.com/mac/blog/2006/07/more_vim_save_time_with_macros_1.html - MKLISTS.VIM (2006-08-31)
 http://www.vim.org/                                                          - MKLISTS.VIM (Ver 5.5 in March 2000)
+http://concisionandconcinnity.blogspot.com/2009/07/vim-part-i-improved-python-syntax.html - MKLISTS.VIM.COLOR "blackboard" scheme
+https://github.com/Pychimp/Pychimp-vim                                         - MKLISTS.VIM.COLORS
 https://github.com/ivanov/vim-ipython                                        - MKLISTS.VIM.IPYTHON Two-way integration between Vim and IPython 0.11+
 https://github.com/ivanov/vim-ipython/issues                                 - MKLISTS.VIM.IPYTHON Two-way integration between Vim and IPython 0.11+
 http://www.cs.berkeley.edu/~amc/Par/                                         - MKLISTS.VIM.PAR alternative to fmt, see also vim's gq

@@ -1,5 +1,4 @@
 http://37signals.com/svn/posts/2582-how-do-i-learn-to-program                  - MKLISTS.PYTHON 
-http://winpdb.org/tutorial/WinpdbTutorial.html                                 - MKLISTS.PYTHON.WINPDB
 http://bytes.com/topic/python/answers/37201-unix-style-sort-python             - MKLISTS.PYTHON
 http://casa.colorado.edu/~ginsbura/pygrep.htm                                  - MKLISTS.PYTHON
 http://code.google.com/p/argparse/                                             - MKLISTS.PYTHON upgrade to argparse?
@@ -40,5 +39,6 @@ http://www.c2.com/cgi/wiki?UnitTestTrial                                       -
 http://www.c2.com/cgi/wiki?UnitTests                                           - MKLISTS.PYTHON.UNITTESTS
 http://www.python.org/doc/current/lib                                          - MKLISTS.PYTHON.UNITTESTS module 
 http://www.python.org/doc/current/lib/module-unittest.html                     - MKLISTS.PYTHON.UNITTESTS module 
+http://winpdb.org/tutorial/WinpdbTutorial.html                                 - MKLISTS.PYTHON.WINPDB
 http://pythonsimple.noucleus.net/python-install/python-site-packages-what-they-are-and-where-to-put-them - MKLISTS.PYTHON.XTC site-packages
 http://stackoverflow.com/questions/520031/whats-the-cleanest-way-to-extract-urls-from-a-string-using-python - MKLISTS.PYTHON.XTC
