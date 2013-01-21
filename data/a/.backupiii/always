@@ -1,9 +1,0 @@
-ALWAYS ~/dropbox/u/agendabin/sym
-ALWAYS ~/dropbox/u/dataa/.html/ ~/dropbox/u/dataa/.grules ~/dropbox/u/dataa/.lrules 
-ALWAYS ~/dropbox/u/datab/.html/ ~/dropbox/u/datab/.lrules
-ALWAYS ~/dropbox/u/datac/.html/ ~/dropbox/u/datac/.lrules
-ALWAYS ~/dropbox/u/handles/.html/HMKLISTS.html
-ALWAYS http://is.gd/jOrOsD - todo.txt format
-ALWAYS https://github.com/dchud/badstorkpox
-ALWAYS https://github.com/tombaker/mklists    
-ALWAYS https://github.com/tombaker/shawkle - code of shawkle.py and issue tracker - use ~/dropbox/u/agendabin/shuffle.py
