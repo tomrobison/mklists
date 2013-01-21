@@ -1,4 +1,7 @@
+http://ipython.org/                                                            - MKLISTS.IPYTHON
+http://ipython.org/ipython-doc/                                                - MKLISTS.IPYTHON
 http://ipython.org/ipython-doc/dev/development/ipythonzmq.html                 - MKLISTS.IPYTHON
+http://ipython.org/ipython-doc/dev/interactive/htmlnotebook.html               - MKLISTS.IPYTHON
 http://ipython.org/ipython-doc/dev/interactive/qtconsole.html                  - MKLISTS.IPYTHON
 http://ipython.org/ipython-doc/dev/interactive/shell.html                      - MKLISTS.IPYTHON
 http://ipython.scipy.org/moin/                                                 - MKLISTS.IPYTHON
@@ -31,4 +34,5 @@ http://ipython.org/ipython-doc/rel-0.12.1/index.html                           -
 http://mail.scipy.org/pipermail/ipython-user/2009-November/006675.html         - MKLISTS.IPYTHON- uses Eclipse and PyDev
 http://pry.github.com/                                                         - MKLISTS.IPYTHON.PRY Interactive Ruby shell, like iPython
 https://github.com/pry/pry/wiki                                                - MKLISTS.IPYTHON.PRY - http://www.codeschool.com/courses/try-ruby
-http://ipython.org/ipython-doc/dev/interactive/htmlnotebook.html               - MKLISTS.IPYTHON
+http://pypi.python.org/pypi/readline                                           - MKLISTS.IPYTHON readline - because OS X libedit causes problems
+https://github.com/Pychimp/Pychimp-vim                                         - MKLISTS.VIM.COLORS

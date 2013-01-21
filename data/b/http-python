@@ -39,6 +39,11 @@ http://www.c2.com/cgi/wiki?UnitTestTrial                                       -
 http://www.c2.com/cgi/wiki?UnitTests                                           - MKLISTS.PYTHON.UNITTESTS
 http://www.python.org/doc/current/lib                                          - MKLISTS.PYTHON.UNITTESTS module 
 http://www.python.org/doc/current/lib/module-unittest.html                     - MKLISTS.PYTHON.UNITTESTS module 
+https://nose.readthedocs.org/en/latest/                       - MKLISTS.PYTHON.UNITTESTS
+https://nose.readthedocs.org/en/latest/finding_tests.html     - MKLISTS.PYTHON.UNITTESTS "Finding and running tests"
+https://nose.readthedocs.org/en/latest/testing.html           - MKLISTS.PYTHON.UNITTESTS - "Testing with nose"
+https://nose.readthedocs.org/en/latest/testing_tools.html     - MKLISTS.PYTHON.UNITTESTS
+https://nose.readthedocs.org/en/latest/usage.html             - MKLISTS.PYTHON.UNITTESTS - "Basic usage"
 http://winpdb.org/tutorial/WinpdbTutorial.html                                 - MKLISTS.PYTHON.WINPDB
 http://pythonsimple.noucleus.net/python-install/python-site-packages-what-they-are-and-where-to-put-them - MKLISTS.PYTHON.XTC site-packages
 http://stackoverflow.com/questions/520031/whats-the-cleanest-way-to-extract-urls-from-a-string-using-python - MKLISTS.PYTHON.XTC

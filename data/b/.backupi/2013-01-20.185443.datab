@@ -3,9 +3,3 @@ https://nose.readthedocs.org/en/latest/finding_tests.html     - MKLISTS.PYTHON.U
 https://nose.readthedocs.org/en/latest/testing.html           - MKLISTS.PYTHON.UNITTESTS - "Testing with nose"
 https://nose.readthedocs.org/en/latest/testing_tools.html     - MKLISTS.PYTHON.UNITTESTS
 https://nose.readthedocs.org/en/latest/usage.html             - MKLISTS.PYTHON.UNITTESTS - "Basic usage"
-d PYTHON YAML - http://www.yaml.org/spec/1.2/spec.html
-d PYTHON UNITTESTS - "nose"
-d VIM-PYTHON http://www.youtube.com/watch?v=YhqsjUUHj6g - MKLISTS2 Martin Brochhaus on vim as a Python IDE
-d VIM-PYTHON https://github.com/mbrochh
-d VIM-PYTHON irc://irc.freenode.net/#vim
-d vim :colorscheme blackboard - turn into macro

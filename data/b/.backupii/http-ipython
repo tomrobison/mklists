@@ -1,5 +1,5 @@
-http://ipython.org/ipython-doc/                                                - MKLISTS.IPYTHON
 http://ipython.org/                                                            - MKLISTS.IPYTHON
+http://ipython.org/ipython-doc/                                                - MKLISTS.IPYTHON
 http://ipython.org/ipython-doc/dev/development/ipythonzmq.html                 - MKLISTS.IPYTHON
 http://ipython.org/ipython-doc/dev/interactive/htmlnotebook.html               - MKLISTS.IPYTHON
 http://ipython.org/ipython-doc/dev/interactive/qtconsole.html                  - MKLISTS.IPYTHON
@@ -12,6 +12,7 @@ http://mail.scipy.org/mailman/listinfo/ipython-user                            -
 http://mail.scipy.org/pipermail/ipython-user/                                  - MKLISTS.IPYTHON - MAILING LIST - USER ARCHIVES
 http://pages.physics.cornell.edu/~myers/teaching/ComputationalMethods/python/ipython.html - MKLISTS.IPYTHON
 http://philips-tips.blogspot.com/2012/01/fun-with-vim-and-ipython-kernel.html  - MKLISTS.IPYTHON
+http://pypi.python.org/pypi/readline                                           - MKLISTS.IPYTHON readline - because OS X libedit causes problems
 http://pythonadventures.wordpress.com/tag/ipdb/                - MKLISTS.IPYTHON
 http://qt-project.org/wiki/PySide_Binaries_MacOSX                              - MKLISTS.IPYTHON
 http://showmedo.com/videos/ipython                                             - MKLISTS.IPYTHON
