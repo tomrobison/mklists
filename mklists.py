@@ -6,18 +6,18 @@ import os, re, shutil, string, sys, datetime, optparse
 def getoptions():
     p = optparse.OptionParser(description="Shawkle - Rule-driven maintenance of plain-text lists",
         prog="shawkle.py", version="0.5", usage="%prog")
-    p.add_option("--cloud", action="store", type="string", dest="cloud", default="cloud",
-        help="file, contents of which to be prefixed to each urlified HTML file; default 'cloud'")
-    p.add_option("--files2dirs", action="store", type="string", dest="files2dirs", default='.files2dirs',
-        help="files with corresponding target directories; default '.files2dirs'")
-    p.add_option("--globalrules", action="store", type="string", dest="globalrules", default='.globalrules',
-        help="rules used globally (typically an absolute pathname), processed first; default '.globalrules'")
-    p.add_option("--localrules", action="store", type="string", dest="localrules", default=".rules",
-        help="rules used locally (typically a relative pathname), processed second; default '.rules'")
-    p.add_option("--sedtxt", action="store", type="string", dest="sedtxt", default=".sedtxt",
-        help="stream edits for plain text, eg, expanding drive letters to URIs; default '.sedtxt'")
-    p.add_option("--sedhtml", action="store", type="string", dest="sedhtml", default=".sedhtml",
-        help="stream edits for urlified HTML, eg, shortening visible pathnames; default '.sedhtml'")
+    p.add_option("--cloud", action="store", type="string", dest="cloud", default="always",
+        help="file, contents of which to be prefixed to each urlified HTML file; default 'always'")
+    p.add_option("--files2dirs", action="store", type="string", dest="files2dirs", default='.f2d',
+        help="files with corresponding target directories; default '.f2d'")
+    p.add_option("--globalrules", action="store", type="string", dest="globalrules", default='.grules',
+        help="rules used globally (typically an absolute pathname), processed first; default '.grules'")
+    p.add_option("--localrules", action="store", type="string", dest="localrules", default=".lrules",
+        help="rules used locally (typically a relative pathname), processed second; default '..rules'")
+    p.add_option("--sedtxt", action="store", type="string", dest="sedtxt", default=".sedt",
+        help="stream edits for plain text, eg, expanding drive letters to URIs; default '.sedt'")
+    p.add_option("--sedhtml", action="store", type="string", dest="sedhtml", default=".sedh",
+        help="stream edits for urlified HTML, eg, shortening visible pathnames; default '.sedh'")
     p.add_option("--htmldir", action="store", type="string", dest="htmldir", default=".html",
         help="name of directory for urlified HTML files; default '.html'")
     ( options, arguments ) = p.parse_args()
