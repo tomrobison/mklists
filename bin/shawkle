@@ -1,0 +1,31 @@
+#!/bin/bash
+
+function sym
+{
+    cd $1
+    ~/mklists/shawkle-20130102.py     --cloud           ~/mklists/dataa/always        \
+                                      --files2dirs      ~/mklists/dataa/.f2d          \
+                                      --globalrules     ~/mklists/dataa/.grules       \
+                                      --sedtxt          ~/mklists/dataa/.sedt         \
+                                      --sedhtml         ~/mklists/dataa/.sedh         \
+                                      --localrules      .lrules                  
+}
+
+for DIR in ~/mklists/data/a ~/mklists/data/b ~/mklists/data/c
+do
+    if [ ! -d "$DIR" ]
+    then
+        echo "$DIR is not a directory; exiting..."
+        exit
+    else
+        sym $DIR
+    fi
+done
+
+echo 'Okay to commit?'; read
+
+cd ~/mklists/data
+git add a b c
+git commit -m "Refreshing data directories (data/a data/b data/c)"
+echo cd ~/mklists; cd ~/mklists
+git status
