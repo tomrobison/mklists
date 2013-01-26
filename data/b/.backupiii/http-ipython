@@ -12,6 +12,7 @@ http://mail.scipy.org/mailman/listinfo/ipython-user                            -
 http://mail.scipy.org/pipermail/ipython-user/                                  - MKLISTS.IPYTHON - MAILING LIST - USER ARCHIVES
 http://pages.physics.cornell.edu/~myers/teaching/ComputationalMethods/python/ipython.html - MKLISTS.IPYTHON
 http://philips-tips.blogspot.com/2012/01/fun-with-vim-and-ipython-kernel.html  - MKLISTS.IPYTHON
+http://pypi.python.org/pypi/readline                                           - MKLISTS.IPYTHON readline - because OS X libedit causes problems
 http://pythonadventures.wordpress.com/tag/ipdb/                - MKLISTS.IPYTHON
 http://qt-project.org/wiki/PySide_Binaries_MacOSX                              - MKLISTS.IPYTHON
 http://showmedo.com/videos/ipython                                             - MKLISTS.IPYTHON
@@ -34,5 +35,3 @@ http://ipython.org/ipython-doc/rel-0.12.1/index.html                           -
 http://mail.scipy.org/pipermail/ipython-user/2009-November/006675.html         - MKLISTS.IPYTHON- uses Eclipse and PyDev
 http://pry.github.com/                                                         - MKLISTS.IPYTHON.PRY Interactive Ruby shell, like iPython
 https://github.com/pry/pry/wiki                                                - MKLISTS.IPYTHON.PRY - http://www.codeschool.com/courses/try-ruby
-http://pypi.python.org/pypi/readline                                           - MKLISTS.IPYTHON readline - because OS X libedit causes problems
-https://github.com/Pychimp/Pychimp-vim                                         - MKLISTS.VIM.COLORS

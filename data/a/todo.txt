@@ -1,9 +1,24 @@
 d http://pythonadventures.wordpress.com/tag/ipdb/
 d http://vimbits.com/
+d http://www.reddit.com/r/learnpython
+d EDIT THIS ~/u/config/vimconfig/vimrc-mbrochh-based    vim -u ~/u/config/vimconfig/vimrc-mbrochh-based
+d POWERLINE -> unknown function: pathogen#infect - https://github.com/tpope/vim-pathogen/issues/50
+d POWERLINE http://arcoleo.org/dsawiki/Wiki.jsp?page=Install%20Tmux%20on%20Ubuntu
+d PYTHON 2012-02-04 Sat 1100 http://www.hacdc.org/ http://www.hacdc.org/events/aaronsw-memorial-hackathon/ 
+d PYTHON 2012-02-04 Sat 1100 http://www.meetup.com/hac-dc/events/100321172/
+d PYTHON 2013-01-26 Sat 1000 1133 15th St NW, 9th Floor, DC, Washington, DC 
+d PYTHON 2013-01-26 Sat 1000 http://meetup.dcpython.org/events/94057102/ http://meetup.dcpython.org/polls/703622/ Venue: http://bit.ly/ZZzf0e
+d PYTHON 2013-01-26 Sat 1000 http://meetup.dcpython.org/events/94057102/?a=co1.2_grp&rv=co1.2 - SocialCode event
 d PYTHON UNITTESTS - "nose"
 d PYTHON YAML - http://www.yaml.org/spec/1.2/spec.html
+d PYTHON http://sagebourse.com (Tony Ojeda <ojedatony1616@gmail.com>)
+d PYTHON ~/u/config/vimconfig/vimrc-mbrochh-based
+d VIM http://vim.wikia.com/wiki/Using_command-line_history - WOW
+d VIM-IDE POWERLINE http://lokaltog.github.com/powerline/ - installation instructions
+d VIM-IDE POWERLINE https://github.com/Lokaltog/powerline (was it http://code.google.com/p/powerline/ http://pypi.python.org/pypi/powerline??)
 d VIM-PYTHON http://www.youtube.com/watch?v=YhqsjUUHj6g - MKLISTS2 Martin Brochhaus on vim as a Python IDE
 d VIM-PYTHON https://github.com/mbrochh
 d VIM-PYTHON irc://irc.freenode.net/#ipython
 d VIM-PYTHON irc://irc.freenode.net/#vim
+d import pdb; pdb.set_trace()
 d vim :colorscheme blackboard - alternative config file?

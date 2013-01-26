@@ -1,8 +1,7 @@
-d PYTHON Nose - https://nose.readthedocs.org/en/latest/
-d PYTHON Nose - https://nose.readthedocs.org/en/latest/finding_tests.html - "Finding and running tests"
-d PYTHON Nose - https://nose.readthedocs.org/en/latest/testing.html   - MKLISTS.PYTHON.UNITTESTS - "Testing with nose"
-d PYTHON Nose - https://nose.readthedocs.org/en/latest/testing_tools.html
-d PYTHON Nose - https://nose.readthedocs.org/en/latest/usage.html     - MKLISTS.PYTHON.UNITTESTS - "Basic usage"
+d PYTHON UNITTESTS - "nose"
 d PYTHON YAML - http://www.yaml.org/spec/1.2/spec.html
-d WATCH http://www.youtube.com/watch?v=YhqsjUUHj6g        - MKLISTS2 Martin Brochhaus on vim as a Python IDE
-d vim :colorscheme blackboard - turn into macro
+d VIM-PYTHON http://www.youtube.com/watch?v=YhqsjUUHj6g - MKLISTS2 Martin Brochhaus on vim as a Python IDE
+d VIM-PYTHON https://github.com/mbrochh
+d VIM-PYTHON irc://irc.freenode.net/#vim
+d VIM-PYTHON irc://irc.freenode.net/#ipython
+d vim :colorscheme blackboard - alternative config file?
