@@ -17,7 +17,7 @@ How to use mklists quickly:
 
 Add mklists as an environment variable.
 
-    $ alias mkdir='python /absolute/path/to/mklists.py'
+    $ alias mklists='python /absolute/path/to/mklists.py'
 
 Change to the directory for list making.
 
