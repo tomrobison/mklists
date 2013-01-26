@@ -1,6 +1,6 @@
 #!/bin/bash
 
-~/mklists/shawkle-20130102.py     --cloud           ~/mklists/data/a/always.txt    \
+~/mklists/shawkle-20130102.py     --cloud           ~/mklists/data/a/always        \
                                   --files2dirs      ~/mklists/data/a/.f2d          \
                                   --globalrules     ~/mklists/data/a/.grules       \
                                   --sedtxt          ~/mklists/data/a/.sedt         \

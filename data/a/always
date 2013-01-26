@@ -1,0 +1,11 @@
+ALWAYS ~/mklists/DATA/A/.html/ ~/mklists/DATA/B/.html/ ~/mklists/DATA/C/.html/
+ALWAYS https://github.com/tombaker/mklists    
+ALWAYS https://github.com/tombaker/shawkle - code of shawkle.py and Issue Tracker - use ~/mklists/bin/shawkle (or shawkleall)
+ALWAYS CONFIG ~/mklists/data/a/.f2d      - alias f2d
+ALWAYS CONFIG ~/mklists/data/a/.grules  - alias grules
+ALWAYS CONFIG ~/mklists/data/a/.lrules  - alias lrules or ruu
+ALWAYS CONFIG ~/mklists/data/a/.sedh     - alias sedh
+ALWAYS CONFIG ~/mklists/data/a/.sedt     - alias sedt
+ALWAYS CONFIG ~/mklists/data/b/.lrules  - alias lrules or ruu
+ALWAYS CONFIG ~/mklists/data/c/.lrules  - alias lrules or ruu
+ALWAYS vim -u ~/u/config/vimconfig/vimrc-mbrochh-based

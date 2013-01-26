@@ -1,0 +1,7 @@
+#!/bin/bash
+DLOGFILE=~/mklists/data/b/dlog
+
+echo DLOG $(date +"%Y-%m-%d") $(date +"%H%M") ' ' >/tmp/logfile-line
+cat /tmp/logfile-line >>$DLOGFILE
+vim +$R $DLOGFILE
+

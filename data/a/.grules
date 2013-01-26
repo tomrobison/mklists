@@ -6,5 +6,5 @@
 0|.|lines.tmp|lines|
 0|.|lines.tmp|dataa|
 1|^http|lines|datab|
-0|^d 20|lines|datab|
+1|^DLOG|lines|datab|
 0|^2013-.. |lines|datac|

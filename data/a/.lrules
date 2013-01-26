@@ -1,23 +1,11 @@
-# Todo: make these rules compatible with https://github.com/ginatrapani/todo.txt-cli/wiki/The-Todo.txt-Format
 0|.|lines|HUH|
 0|.|dataa|HUH|
 
 # cloud
-    1|ALWAYS|HUH|always.txt|
+    1|ALWAYS|HUH|always|
 
-# a
-    1|^ddddd|HUH|todo.txt|
-        1|^dddd$|HUH|todo.txt|
-        1|^ddd$|HUH|todo.txt|
-        1|^dd$|HUH|todo.txt|
-        1|^d$|HUH|todo.txt|
-
-# other files
-    1|FEATURES|HUH|features.txt|
-    1|TAGLINE|HUH|tagline.txt|
-    1|CONFIG|HUH|config.txt|
-    1|ISSUE|HUH|issues.txt|
-    1|CLASS|HUH|classes.txt|
-    1|LUTZ|HUH|lutz.txt|
+# todo.txt
+    1|^dd$|HUH|todo.txt|
+    1|^d$|HUH|todo.txt|
     1|[A-Z]|HUH|todo.txt|
 
