@@ -12,6 +12,17 @@ A frozen, stable, copy of shawkle is included in this project, for reference,
 under the name shawkle-20130102.py, along with shawkle-alt-20130102.py, an 
 alternative algorithm for a key part of the script.
 
+How to use mklists quickly:
+----------
+
+Add mklists as an environment variable.
+
+    $ alias mkdir='python /absolute/path/to/mklists.py'
+
+Change to the directory for list making.
+
+    $ mklists
+
 Wish list:
 ----------
 
