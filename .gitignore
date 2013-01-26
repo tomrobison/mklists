@@ -1,3 +1,4 @@
+*.pyc
 data/a/.backup/*
 data/a/.backupi/*
 data/a/.backupii/*
