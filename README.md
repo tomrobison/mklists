@@ -21,6 +21,10 @@ Add mklists as an environment variable.
 
 Change to the directory for list making.
 
+    $ cd /change/to/your/lists/folder
+
+Run mklists
+
     $ mklists
 
 Wish list:
