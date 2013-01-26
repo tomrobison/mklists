@@ -12,3 +12,4 @@
 2013-01 LUTZ 38 Decorators - skimmed
 2013-01 LUTZ 39 Metaclasses - skimmed
 2013-01 MKLISTS SHUFFLE re.compile so that rule can search for filename '_[A-Z]'
+2013-01 VIM-IDE POWERLINE http://lokaltog.github.com/powerline/ - installation instructions

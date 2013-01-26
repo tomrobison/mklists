@@ -1,3 +1,50 @@
-d 2013-01-17 Read Lutz 25 OOP: The big picture 
-d 2013-01-18 Fri 1122 Start new log for mklists
-d 2013-01-19 Sat 1351 sudo pip install ipdb - http://pythonadventures.wordpress.com/tag/ipdb/
+DLOG 2013-01-17 Read Lutz 25 OOP: The big picture 
+DLOG 2013-01-18 Fri 1122 Start new log for mklists
+DLOG 2013-01-19 MARCUS 1600 http://www.youtube.com/watch?v=YhqsjUUHj6g - Martin Brochhaus on vim as a Python IDE 
+DLOG 2013-01-19 MARCUS 1628 Also: watching http://drupalize.me/videos/drupal-7-overview
+DLOG 2013-01-19 Sat 1351 sudo pip install ipdb - http://pythonadventures.wordpress.com/tag/ipdb/
+DLOG 2013-01-21 MARCUS 1726 sudo dpkg -l | ncurse    - use the Debian package manager to view which packages are installed
+DLOG 2013-01-21 MARCUS 1727 sudo apt-get install libncurses5-dev
+DLOG 2013-01-21 MARCUS 1729 ./configure --enable-pythoninterp --with-features=huge --prefix=$HOME/opt/vim
+DLOG 2013-01-21 MARCUS 1738 See that /usr/bin/vim is a link to /etc/alternatives/vim, but want it now to be a link to /home/tbaker/opt/vim/bin/vim
+DLOG 2013-01-21 MARCUS 1739 Hmm, the new vim I installed was "-python", so reverted to link to /etc/alternatives/vim
+DLOG 2013-01-21 MARCUS 1805 sudo pip install git+git://github.com/Lokaltog/powerline 
+DLOG 2013-01-21 MARCUS 1814 In Mint software manager, I install "pip" and "git"
+DLOG 2013-01-22 MARCUS 0044 http://code.google.com/p/powerline/
+DLOG 2013-01-24 MARCUS 1112 sudo pip install virtualenv - ran successfully
+DLOG 2013-01-25 MARCUS 1401	http://lokaltog.github.com/powerline/overview.html#installation
+DLOG 2013-01-25 MARCUS 1402	sudo pip install psutil
+DLOG 2013-01-25 MARCUS 1403	sudo apt-get install python-dev
+DLOG 2013-01-25 MARCUS 1404	sudo apt-get install mercurial
+DLOG 2013-01-25 MARCUS 1405	sudo apt-get install cmake
+DLOG 2013-01-25 MARCUS 1406	git clone [pygit2 repository]
+DLOG 2013-01-25 MARCUS 1407	pygit2> python setup.py install   -> git2.h: no such file or directory: https://github.com/libgit2/pygit2/issues/52
+DLOG 2013-01-25 MARCUS 1408	github.com/libgit2/libgit2.git   -> README.md
+DLOG 2013-01-25 MARCUS 1409	mkdir build && cd build
+DLOG 2013-01-25 MARCUS 1410	cmake ..
+DLOG 2013-01-25 MARCUS 1411	cmake --build .
+DLOG 2013-01-25 MARCUS 1412	cmake .. -DCMAKE_INSTALL_PREFIX=/usr/local
+DLOG 2013-01-25 MARCUS 1413	cmake --build . --target install
+DLOG 2013-01-25 MARCUS 1414	pygit2> python setup.py install  -> works this time!
+DLOG 2013-01-25 MARCUS 1415	vim -u /home/tbaker/Dropbox/vimrc-mbrochh-based ~/Dropbox/u/pybin/shuffle.py
+DLOG 2013-01-25 MARCUS 1416	Error detected while processing /home/tbaker/Dropbox/vimrc-mbrochh-based:
+DLOG 2013-01-25 MARCUS 1417	line 136: E484: Can't open file .vim/powerline/powerline/bindings/vim/plugin/source_plugin.vim
+DLOG 2013-01-25 MARCUS 1418	You need to install the Powerline Python package. Please consult documentation: http://lokaltog.github.com/powerline/
+DLOG 2013-01-25 MARCUS 1419	http://usevim.com/2013/01/23/vim-powerline/
+DLOG 2013-01-25 MARCUS 1420	git clone git://github.com/Lokaltog/powerline.git; cd powerline; sudo python setup.py install
+DLOG 2013-01-25 MARCUS 1421	http://www.fsd.it/fonts/pragmatapro.htm#.UQLo6ujZ3ok - Pragmata Pro 0.81 is great!
+DLOG 2013-01-25 MARCUS 1422	sudo pip install --user git+git://github.com/Lokaltog/powerline
+DLOG 2013-01-25 MARCUS 1423	Fontconfig - note: using Gnome terminal
+DLOG 2013-01-25 MARCUS 1424	1. download latest Powerline symbols - https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf
+DLOG 2013-01-25 MARCUS 1425	   download latest version fontconfig: https://github.com/Lokaltog/powerline/raw/develop/font/10-powerline-symbols.conf
+DLOG 2013-01-25 MARCUS 1426	2. Move PowerlineSymbols.otf to ~/.fonts/ (or another X font directory).
+DLOG 2013-01-25 MARCUS 1427	3. Run fc-cache -vf ~/.fonts to update your font cache.
+DLOG 2013-01-25 MARCUS 1428	4. Move 10-powerline-symbols.conf to ~/.config/fontconfig/conf.d/
+DLOG 2013-01-25 MARCUS 1429	Patched font
+DLOG 2013-01-25 MARCUS 1430	1. Download a font from https://github.com/Lokaltog/powerline-fonts
+DLOG 2013-01-25 MARCUS 1431	2. Move your patched font to ~/.fonts/
+DLOG 2013-01-25 MARCUS 1432	3. Run fc-cache -vf ~/.fonts to update your font cache.
+DLOG 2013-01-25 MARCUS 1433	4. Update Gnome to use the patched font. Chose "Menlo for Powerline".
+DLOG 2013-01-25 MARCUS 1644 powerline/build/scripts-2.7/powerline-prompt
+DLOG 2013-01-25 MARCUS 2043 http://arcoleo.org/dsawiki/Wiki.jsp?page=Install%20Tmux%20on%20Ubuntu - turns out, didn't need to install tmux!!
+DLOG 2013-01-25 MARCUS 2043 unknown function: pathogen#infect - https://github.com/tpope/vim-pathogen/issues/50

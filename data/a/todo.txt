@@ -3,14 +3,11 @@ dd 2012-02-04 Sat 1100 PYTHON http://www.meetup.com/hac-dc/events/100321172/
 dd 2013-01-26 Sat 1000 PYTHON 1133 15th St NW, 9th Floor, DC, Washington, DC 
 dd 2013-01-26 Sat 1000 PYTHON http://meetup.dcpython.org/events/94057102/ http://meetup.dcpython.org/polls/703622/ Venue: http://bit.ly/ZZzf0e
 dd 2013-01-26 Sat 1000 PYTHON http://meetup.dcpython.org/events/94057102/?a=co1.2_grp&rv=co1.2 - SocialCode event
-d http://pythonadventures.wordpress.com/tag/ipdb/
-d http://vimbits.com/
-d http://www.reddit.com/r/learnpython
-d IPYTHON import pdb; pdb.set_trace()    - or use "ipdb"
 d POWERLINE -> unknown function: pathogen#infect - https://github.com/tpope/vim-pathogen/issues/50
-d PYTHON UNITTESTS - "nose"
 d PYTHON YAML - http://www.yaml.org/spec/1.2/spec.html
 d PYTHON http://sagebourse.com (Tony Ojeda <ojedatony1616@gmail.com>)
+d PYTHON http://www.reddit.com/r/learnpython
+d PYTHON import pdb; pdb.set_trace()    - or use "ipdb" http://pythonadventures.wordpress.com/tag/ipdb/
 d PYTHON ~/u/config/vimconfig/vimrc-mbrochh-based
 d TAGLINE 2012-12-10 "Rule-driven maintenance of plain-text lists"
 d TAGLINE 2013-01-01 "Rearranges folders of plain-text lists according to your evolving rules"
@@ -18,9 +15,9 @@ d TAGLINE 2013-01-02 "Refreshes folders of plain-text lists to match your evolvi
 d TAGLINE 2013-01-03 "Synchs folders of plain-text lists to match your evolving rules"
 d TAGLINE 2013-01-04 "Tweaks folders of plain-text lists in synch with evolving content rules"
 d TAGLINE 2013-01-13 "Refreshes folders of plain-text lists in sync with your evolving rules"
-d VIM http://vim.wikia.com/wiki/Using_command-line_history - WOW
-d VIM-IDE POWERLINE http://lokaltog.github.com/powerline/ - installation instructions
 d VIM-IDE POWERLINE https://github.com/Lokaltog/powerline (was it http://code.google.com/p/powerline/ http://pypi.python.org/pypi/powerline??)
+d VIM-IDE http://vim.wikia.com/wiki/Using_command-line_history - WOW
+d VIM-IDE http://vimbits.com/
 d VIM-IDE http://www.youtube.com/watch?v=YhqsjUUHj6g - MKLISTS2 Martin Brochhaus on vim as a Python IDE
 d VIM-IDE https://github.com/mbrochh
 d VIM-IDE irc://irc.freenode.net/#ipython
@@ -32,4 +29,4 @@ d WISHLIST Make rules for data/a/todo.txt compatible with https://github.com/gin
 d WISHLIST Man page and documentation in markdown. 
 d WISHLIST Object-oriented design.
 d WISHLIST Per-directory configuration (which can be overridden by command-line options).
-d WISHLIST Unit tests - http://stackoverflow.com/questions/61151/where-do-the-python-unit-tests-go
+d WISHLIST Unit tests - http://stackoverflow.com/questions/61151/where-do-the-python-unit-tests-go - http://pypi.python.org/pypi/nose/ ("nose")

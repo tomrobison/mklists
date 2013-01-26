@@ -8,4 +8,5 @@ ALWAYS CONFIG ~/mklists/data/a/.sedh     - alias sedh
 ALWAYS CONFIG ~/mklists/data/a/.sedt     - alias sedt
 ALWAYS CONFIG ~/mklists/data/b/.lrules  - alias lrules or ruu
 ALWAYS CONFIG ~/mklists/data/c/.lrules  - alias lrules or ruu
-ALWAYS vim -u ~/u/config/vimconfig/vimrc-mbrochh-based
+ALWAYS NOTES REQUIREMENTS ~/mklists/notes/requirements/.index.html
+ALWAYS NOTES YAML ~/mklists/notes/yaml/

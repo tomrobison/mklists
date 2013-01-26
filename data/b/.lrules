@@ -1,8 +1,9 @@
 0|.|lines|HUH|
 0|.|datab|HUH|
-0|^d 20|HUH|dlog|
+1|^DLOG|HUH|dlog|
 1|^http|HUH|http|
 0|MKLISTS.PYTHON|http|http-python|3
+0|MKLISTS.YAML|http|http-yaml|3
 0|MKLISTS.IPYTHON|http|http-ipython|3
 0|MKLISTS.VIM|http|http-vim|3
 0|MKLISTS.SHAWKLE|http|http-shawkle|3
@@ -10,7 +11,6 @@
 0|MKLISTS.MARKDOWN|http|http-markdown|3
 0|MKLISTS.GITHUB|http|http-github|3
 
-3|ANKI2|HUH|anki|
-3|MKLISTS2|HUH|mklists|
-1|ipython|HUH|ipython|
-1|git|HUH|git|
+1|LUTZ|HUH|lutz|
+1|ISSUES|HUH|issues|
+1|IDEAS|HUH|ideas|
