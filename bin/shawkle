@@ -1,13 +1,14 @@
 #!/bin/bash
+DATA=~/mklists/data
 
 function sym
 {
     cd $1
-    ~/mklists/shawkle-20130102.py     --cloud           ~/mklists/dataa/always        \
-                                      --files2dirs      ~/mklists/dataa/.f2d          \
-                                      --globalrules     ~/mklists/dataa/.grules       \
-                                      --sedtxt          ~/mklists/dataa/.sedt         \
-                                      --sedhtml         ~/mklists/dataa/.sedh         \
+    ~/mklists/shawkle-20130102.py     --cloud           ~/mklists/data/a/always        \
+                                      --files2dirs      ~/mklists/data/a/.f2d          \
+                                      --globalrules     ~/mklists/data/a/.grules       \
+                                      --sedtxt          ~/mklists/data/a/.sedt         \
+                                      --sedhtml         ~/mklists/data/a/.sedh         \
                                       --localrules      .lrules                  
 }
 
@@ -22,9 +23,10 @@ do
     fi
 done
 
+cd $DATA
+git status
 echo 'Okay to commit?'; read
 
-cd ~/mklists/data
 git add a b c
 git commit -m "Refreshing data directories (data/a data/b data/c)"
 echo cd ~/mklists; cd ~/mklists
