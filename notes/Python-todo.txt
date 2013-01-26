@@ -1,0 +1,56 @@
+2012-11-30 Chris L
+    You can get a great working version of MacVim with MacPorts
+    http://www.macports.org/
+    
+    Once you have installed MacPorts and updated, do
+    
+        sudo port install MacVim +huge +python27 +ruby +perl
+    
+    MacPorts will install an additional version of Python 2.7 on your system,
+    but don't fret. You might have to do
+    
+         sudo port select python python27
+    
+    too. MacPorts is also a great way to manage dependencies for big
+    Python libraries like Numpy/SciPy, psycopg2, etc. Most of these
+    packages are available under py27-<package_name>, such as
+    py27-ipython.
+    
+    If you have further questions, I'd suggest asking me offline, or
+    starting a new topic on this list, or asking on Stack Overflow.
+
+2012-11-30 Response
+    I actually did install MacVim and Python 2.7 and iPython awhile ago, and they
+    all work fine on their own.  What I'd like to do is somehow integrate vim
+    better with Python.  For example, the pictures of vim as a Python IDE [1] look
+    great, though I never quite got my head around that, perhaps because I don't
+    really know from experience what to expect from an IDE.  "Two-way integration
+    between Vim and iPython" [2] sounded terrific -- execute in iPython, then drop
+    into the full vim environment to edit; highlight some code to execute then drop
+    back into iPython to watch the results -- but I couldn't get this to work at
+    all, maybe because of subtle incompatibilities between the source for qtconsole
+    (or ipython) and Mac Unix?.
+
+    [1] http://blog.dispatched.ch/2009/05/24/vim-as-python-ide/
+    [2] https://github.com/ivanov/vim-ipython
+
+2012-11-30
+    To get the IPython QT console going, you'll need to install the MacPorts
+    packages MacVim as specified earlier, py27-ipython, py27-pyqt4,
+    py27-pygments, and py27-zmq.
+
+    I haven't tried that plugin to integrate IPython and Vim yet. That's very
+    interesting, but not usually the mode in which I work. I always have both
+    running, but I use IPython as a sandbox to sketch out ideas, try out
+    libraries I don't know, etc., alongside a script or program I'm developing
+    in Vim (in a different iTerm2 tab or window). Note that you can use Vim
+    keybindings for line-editing with IPython by putting the following lines in
+    your ~/.inputrc file
+
+        set editing-mode vi
+        set keymap vi
+
+    and as long as you set your EDITOR=vim in your ~/.profile or
+    ~/.bash_profile, you can edit larger snippets for trying in IPython using
+    the %edit magic command in an IPython session.
+

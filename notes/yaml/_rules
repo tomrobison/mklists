@@ -1,0 +1,15 @@
+# For each line of SOURCEFILE:
+#     If REGEX matches the string in field number REGEXFIELD (zero means "match in any part of the line"):
+#         the matching line is moved out of SOURCEFILE into TARGETFILE.
+# If an optional SORTFIELD is given:
+#     sort TARGETFILE by SORTFIELD.
+# [ REGEXFIELD , REGEX      , SOURCEFILE  , TARGETFILE , SORTFIELD ]
+- [ 0          , '.'        , 'lines'     , 'HUH'      , ] 
+- [ 0          , '.'        , 'agendaa'   , 'HUH'      , ] 
+- [ 0          , '^= 20'    , 'HUH'       , 'calendar' , ] 
+- [ 1          , 'CLOUD'    , 'HUH'       , 'cloud'    , ] 
+- [ 1          , 'README'   , 'HUH'       , 'readme'   , ] 
+- [ 1          , 'PACK'     , 'HUH'       , 'pack'     , ] 
+- [ 1          , 'PLANE'    , 'HUH'       , 'plane'    , ] 
+- [ 1          , 'XPECT'    , 'HUH'       , 'xpect'    , ] 
+- [ 1          , 'XTC'      , 'HUH'       , 'xtc'      , ] 

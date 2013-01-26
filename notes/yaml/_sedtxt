@@ -1,0 +1,10 @@
+~/|file:///Users/tbaker/
+/Volumes/|file:///Volumes/
+>|&gt;
+<|&lt;
+^_([A-Z,0-9]+)_|file:///Users/tbaker/u/agendab/.html/__\1__.html
+^__([A-Z,0-9]+)__|file:///Users/tbaker/u/agenda/.html/_\1_.html
+file:///Users/tbaker/u/agenda/.html/_ACCT_.html|file:///Volumes/Acct/agendax/.html/_ACCT_.html
+file:///Users/tbaker/u/agendab/.html/__ACCT__.html|file:///Volumes/Acct/agendaxx/.html/__ACCT__.html
+file:///Users/tbaker/u/agenda/.html/_ACCTCLOUD_.html|file:///Volumes/Acct/agendax/.html/_ACCTCLOUD_.html
+file:///Users/tbaker/u/agendab/.html/__ACCTCLOUD__.html|file:///Volumes/Acct/agendaxx/.html/__ACCTCLOUD__.html

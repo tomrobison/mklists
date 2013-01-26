@@ -1,0 +1,399 @@
+<PRE>
+======================================================================
+Main algorithm
+    Check that the directory is a ListFolder, so defined - check out instance_of? - a method for the Object class (Olsen 77)
+    -&gt; that each visible file is a List
+    -&gt; that it has a minimal .listmungerrc configuration file
+       -&gt; if .rules not found, will exist with "Nothing to do"
+       -&gt; if anything found that doesn't match a List or ListFolder, will exit with helpful error message
+    Ask the ListFolder to create a backup of
+    Ask the ListFolder to compute its size "before"
+    Ask the ListFolder to aggregate itself into a default file
+    -&gt; name of the default is the source filename in the very first list composition rule
+    Ask the List to apply the Rules to itself ?  Put another way?
+    Clean up zero-length files.
+    Ask the ListFolder to compute its size "after"
+    Compare ListFolder to ListFolderBackup: are sizes the same?
+    Ask ListFolder to create ListFolderUrlified
+    -&gt; apply sedtxt and sedhtml
+    By default, keeps backups four levels deep.
+
+======================================================================
+Alternative algorithm for dictionary structure
+    Create "alllines" as an array with all lines from all lists.
+    Initialize "lists2lines" as a hash with one key-value pair: "etc" =&gt; alllines
+    For each rule in [array] rules: Fieldnum= regex= sourcelistname= targetlistname=
+    For each key in [hash] listlines:
+       For each line in listlines[key]
+           If line matches, then listlines[targetlist] = matchinglines
+           If line does not matche, then listlines[sourcelist] = lines that do not match
+    listnames2lines
+        For each key in listlines
+           Save file key with value lines
+
+======================================================================
+Lists
+    datafilesaftermove         n=3
+    datafilesbefore            n=3
+    datalines                  n=9
+    filesanddestinations       n=2
+    rules                      n=10
+    sedhtmlmappings            n=1
+    sedtxtmappings             n=3
+
+======================================================================
+Values
+    division                    __future__._Feature    _Feature((2, 2, 0, 'alpha&lt;...&gt; 0, 0, 'alpha', 0), 8192)
+    htmldirectory               str  <a href="file:///Users/tbaker/shawkle/TEST/a/.html">~/shawkle/TEST/a/.html</a>
+    optionalcloudfile           str  cloud
+    sizeafter                   int  200
+    sizebefore                  int  200
+
+======================================================================
+Dictionary of arguments
+    arguments             optparse.Values        {'sedhtml': '.sedhtml', '&lt;...&gt;les2dirs': '.files2dirs'}
+
+======================================================================
+<a href="file:///Users/tbaker/u/bin/shawkle.py">~/u/bin/shawkle.py</a>
+    In order to add a new directory:
+        Create the directory (e.g., <a href="file://file:///Users/tbaker/u/agendar">~/u/agendar</a>)
+        Edit $A/.filemappings - add 'agendar|/home/tbaker/u/agendar'
+        Edit $A/.arules - IF automatic copying is desired.
+        Edit $HANDLES/hagendas.hndl with "handle AR /home/tbaker/u/agendar"
+        In <a href="file://file:///Users/tbaker/u/seebin">~/u/seebin</a>:
+            Create alias, e.g., "ser", calling $SEEBIN/seemaster.
+            Edit $SEEBIN/seemaster with switch for new...
+
+====================================================================
+Settings
+
+Settings.getoptions
+    - all of these are strings
+    - defaults should be set in per-directory configuration files (written
+    - parses the YAML file (i.e., ignores comments and blank lines)
+    - for each option, raises exception if values are ill-formed
+    - returns list, each item of which is a list of two items
+
+    --cloud        
+        file, contents of which to be prefixed to each urlified HTML file
+        default 'cloud'               
+
+    --files2dirs   
+        list of config files, to be processed sequentially
+        each corresponding target directories
+        default '.files2dirs'         
+
+    --rules        
+        list of rule files, to be processed sequentially
+        default '.globalrules,.rules' 
+
+    --sedtxt       
+        stream edits for plain text, eg, expanding drive letters to URIs
+        default ".sedtxt"             
+
+    --sedhtml      
+        stream edits for urlified HTML, eg, shortening visible pathnames
+        default ".sedhtml"            
+
+    --htmldir      
+        name of directory for urlified HTML files
+        default ".html"               
+
+    --badfiles     
+        regular expressions for names of files, the presence of which will trigger exit
+        default [".swp$", "~$"]       
+
+    --backupdirs   
+        backup directories, bumped and filled in order
+        default [".backup", ...]      
+
+    --verbose                                    
+        display different lines - maybe at different levels?
+
+======================================================================
+RuleFile
+
+RuleFile.getrules
+    - list of rule files to be found in .mklistsrc
+    - reads multiple rule files, consolidates into one list
+    - deletes comments and blank lines
+    - performs sanity checks to ensure well-formedness of rules
+    - returns consolidated "list of lists" for rules
+
+    """Consolidates the lines of (optional) global and (mandatory) local rule files into one list.
+    Deletes comments and blank lines.  Performs sanity checks to ensure well-formedness of rules.
+    Returns a consolidated list of rules, each item itself a list of rule components.
+    @@TODO
+    -- Test with illegal filenames.  
+    -- Maybe also test for dot files.  When used as source or target files,
+       dot files would throw off the size test in comparesize()."""
+    globalrulelines = []
+    globalrulefile = absfilename(globalrulefile)
+    localrulefile = absfilename(localrulefile)
+    if globalrulefile:
+        try:
+            globalrulelines = list(open(globalrulefile))
+            print "Using config file:", repr(globalrulefile), "- global rule file"
+        except:
+            print 'Optional global rule file', repr(globalrulefile), 'does not exist (or is unusable) - skipping...'
+    try:
+        localrulelines = list(open(localrulefile))
+        print "Using config file:", repr(localrulefile), "- local rule file"
+    except:
+        print 'Mandatory rule file', repr(localrulefile), 'does not exist (or is unusable) - exiting...'
+        sys.exit()
+    listofrulesraw = globalrulelines + localrulelines
+
+======================================================================
+RulesList 
+    List of Rules, each of which is a list of five items:
+        Matchfield, Matchkey, Sourcefile, Targetfile, Sortfield
+
+======================================================================
+Rule
+
+Rule.apply(SourceList, TargetList):
+    - read lines of SourceList into "datalines"
+      - sourcelines = [ line for line in datalines if not re.search(searchkey, line) ]
+      - targetlines = [ line for line in datalines if re.search(searchkey, line) ]
+        - careful: if field &gt; len(line.split()): sourcelines.append(line)
+     - open source file for reading, write sourcelines, close file
+        sourcefile = open(source, 'w'); sourcefile.writelines(sourcelines); sourcefile.close()
+     - open target file for appending, write targetlines, close file
+        targetfile = open(target, 'a'); targetfile.writelines(targetlines); targetfile.close()
+     - if a sortorder is present:
+       - open TargetList for writing
+       - dsusort(targetlines, sortorder)
+       - targetfile.writelines(targetlines); targetfile.close()
+
+Rule.sanitycheck
+
+    listofrulesparsed = []
+    for line in listofrulesraw:
+        linesplitonorbar = line.partition('#')[0].strip().split('|')
+        if len(linesplitonorbar) == 5:
+            try:
+                linesplitonorbar[0] = int(linesplitonorbar[0])
+            except:
+                print repr(linesplitonorbar)
+                print 'First field must be an integer - exiting...'
+            if linesplitonorbar[0] &lt; 0:
+                print repr(linesplitonorbar)
+                print 'First field must be a positive integer - exiting...'
+                sys.exit()
+            try:
+                re.compile(linesplitonorbar[1])
+            except:
+                # If string 'linesplitonorbar[1]' is not valid regular expression (eg, contains unmatched parentheses)
+                # or some other error occurs during compilation.
+                print 'In rule:', repr(linesplitonorbar)
+                print '...in order to match the regex string:', repr(linesplitonorbar[1])
+                catstring = "...the rule component must be escaped as follows: '" + re.escape(linesplitonorbar[1]) + "'"
+                print catstring
+                sys.exit()
+            if len(linesplitonorbar[4]) &gt; 0:
+                if not linesplitonorbar[4].isdigit():
+                    print repr(linesplitonorbar)
+                    print 'Fifth field must be an integer or zero-length string - exiting...'
+                    sys.exit()
+            if linesplitonorbar[4] &lt; 1:
+                print repr(linesplitonorbar)
+                print 'Fifth field integer must be greater than zero - exiting...'
+                sys.exit()
+            if len(linesplitonorbar[1]) &gt; 0:
+                if len(linesplitonorbar[2]) &gt; 0:
+                    if len(linesplitonorbar[3]) &gt; 0:
+                        listofrulesparsed.append(linesplitonorbar)
+            else:
+                print repr(linesplitonorbar)
+                print 'Fields 2, 3, and 4 must be non-empty - exiting...'
+                sys.exit()
+        elif len(linesplitonorbar) &gt; 1:
+            print linesplitonorbar
+            print 'Edit to five fields, simply comment out, or escape any orbars in regex string - exiting...'
+            sys.exit()
+    createdfiles = []
+    count = 0
+
+    for rule in listofrulesparsed:
+        sourcefilename = rule[2]
+        targetfilename = rule[3]
+        valid_chars = "-_=.%s%s" % (string.ascii_letters, string.digits)
+        filenames = [ sourcefilename, targetfilename ]
+        for filename in filenames:
+            if filename[0] == ".":
+                print 'Filename', repr(filename), 'should not start with a dot...'
+                sys.exit()
+            for c in filename:
+                if c not in valid_chars:
+                    if ' ' in filename:
+                        print repr(rule)
+                        print 'Filename', repr(filename), 'should have no spaces'
+                        sys.exit()
+                    else:
+                        print repr(rule)
+                        print 'Filename', repr(filename), 'has one or more characters other than:', repr(valid_chars)
+                        sys.exit()
+            try:
+                open(filename, 'a+').close()  # like "touch" ensures that filename is writable
+            except:
+                print 'Cannot open', repr(filename), 'as a file for appending - exiting...'
+                sys.exit()
+        createdfiles.append(targetfilename)
+        if count == 0:
+            createdfiles.append(sourcefilename)
+        if sourcefilename == targetfilename:
+            print 'In rules:', repr(rule)
+            print 'Source file:', repr(sourcefilename), 'is same as target file:', repr(targetfilename), '- exiting...'
+            sys.exit()
+        if not sourcefilename in createdfiles:
+            print repr(rule)
+            print 'Source file', repr(sourcefilename), 'has no precedent target file.  Exiting...'
+            sys.exit()
+        count = count + 1
+    return listofrulesparsed
+
+======================================================================
+ListFolder (Class) - a directory holding a set of Lists
+
+ListFolder.clear
+    - removes all (visible?) Files in Folder (prints "Clearing out directory X") so that they can be replaced or refreshed
+    - else FolderNotAccessibleError?
+      - e.g., Folder does not exist, or script does not have read/write access to the Folder
+
+ListFolder.absname
+    - given pathname with "~", returns pathname with expanded user name
+    - given relative pathname, returns absolute pathname
+    - given pathname that is not a directory (i.e., it is a link or file), 
+      exit with NotFileError
+
+ListFolder.size
+    - returns total size in bytes of files in current directory
+
+ListFolder.clearzerolength
+    - silently removes files of length zero
+
+ListFolder.slurp
+    - for all Lists (i.e., visible files, confirmed to be plain text with no blank lines),
+      append all lines to a list
+    - returns a consolidated list of lines
+
+ListFolder.ls
+    - returns list of files in current directory
+    - excludes dot files
+    - excludes subdirectories
+    - exits with error if any of the following are found - SHOULD BE CONFIGURABLE
+      - swap files (files ending with "swp" or "~")
+      - backup files (files, edited with emacs, ending with "~")
+
+ListFolder.mvcontents
+    - moves all Lists from Folder to targetdirectory
+
+ListFolder.mkdir
+    - if Folder for urlified (HTML) files is specified in .configrc or as a command-line option...
+      - create directory: os.mkdir(htmldir)
+    - else: removefiles(htmldir)
+    - print 'Generating urlified files in directory', repr(htmldir)
+
+======================================================================
+ListFile (class) - or "FolderFile"? - as opposed to a "List" (ie, a List of Lines)
+
+ListFile.absname
+    - given pathname that is not a file (i.e., a link or directory), exit with
+      NotFileError??  Or some other response?
+    - given pathname with "~", returns pathname with expanded user name
+    - given relative pathname, returns absolute pathname
+    - do I need this not just for ListFiles, but also ConfigFiles?
+
+ListFile.isplaintext
+    - confirms that file consists of plain text with no blank lines
+    - draws on p.25 recipe from O'Reilly Python Cookbook
+    - reads the first 512 characters of filename into a string
+      - maybe could read and test the first few lines??
+    - string is considered 'text' if less than 30% of its characters are "non-text" characters
+    - NotAllTextError?  and exit with helpful error message
+
+ListFile.hasnoblanklines
+    - read lines of ListFile into list
+    - strip the newlines
+    - check each line. If length is zero, BlankLinesError
+
+
+======================================================================
+LinesList (Class)
+
+LinesList.prependLines()
+    - if CloudList is specified in .configrc or command-line options...
+      - prepend its lines to the List in question
+      - LinesList = CloudLines + LinesList
+    - in case of urlifying lists, prepend '&lt;PRE&gt;\n'
+
+LinesList.urlify(listofdatafiles, sedtxt, sedhtml, htmldir, cloud)
+    """For each file in list of files (listofdatafiles): 
+        create a urlified (HTML) file in the specified directory (htmldir), 
+        prepending the contents of an optional cloud file (cloud) to each urlified file,
+    if os.path.isfile(cloud):
+        print "Prepending file", repr(cloud), "to each urlified file"
+        cloudlines = list(open(cloud))
+    htmldir = absdirname(htmldir)
+
+LinesList.addblanks
+    - if Field 1 of the current line differs from the Field 1 of the previous line
+      - insert a line '\n'
+
+LinesList.sort(field)
+    - given LinesList, return list returns list sorted by given field (greater-than-zero integer "field")
+      dlinesdecorated.sort()
+      dlinessorted = [ t[1] for t in dlinesdecorated ]
+
+LinesList.comparesize(sizeafter):
+    - given an integer (in this case, the aggregate size in bytes of visible files in a directory)
+    - reports if sizes are the same
+    - if sizes are different, sounds alarm and advises to revert to backup
+    - in "progress report", prints 'Size pre was' and 'Size post is'
+    - could aggregate all lines, sort, then get hash
+    - could be a method of LinesList
+
+======================================================================
+ListLine
+
+ListLine.urlify
+    - returns string with HREF links around URLs, i.e., strings starting with "http", "file", "irc"...
+    - code appears to be based on Perl Cookbook, section 6.21 ("urlify")
+
+ListLine.sedTxt
+    - gets configuration from .configrc
+    - part of sequence sedtxtlines - urlify - sedhtmlline
+    - if string matches the regex, substitute the text as per .configrc
+      - something like: 
+        line = re.sub(re.compile(sedmap[0]), sedmap[1], line)
+        ...or pass...
+
+ListLine.sedHtml
+    - gets configuration from .configrc
+    - part of sequence sedtxtlines - urlify - sedhtmlline
+    - if string matches the regex, substitute the text as per .configrc
+      - something like: 
+        line = line.replace(visualimprovement[0], visualimprovement[1])
+        ...or pass...
+
+        optionally stream-editing the plain text using before-and-after transforms (sedtxt), and
+        optionally stream-editing the urlified text using before-and-after transforms (sedhtml).
+======================================================================
+Other
+
+mkfilename(args...):
+
+    - filehtml = htmldir + '/' + os.path.basename(file) + '.html'
+
+movelists(Sourcedir, Targetdir):
+
+    - moves all Lists (visible files) from SourceDir to TargetDir
+      - e.g., bumps previous backups to ".backupi", ".backupii", and ".backupiii".
+
+    - timestamp = datetime.datetime.now()
+      prefix = timestamp.isoformat('.')
+      timestampedpathname = dirpath + '/' + prefix[0:13] + prefix[14:16] + prefix[17:19] + '.' + filename
+    - if TargetDir does not exist,
+      print 'Keeping file', repr(filename), 'where it is - directory', dirpath, 'does not exist...'
+

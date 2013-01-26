@@ -1,0 +1,39 @@
+_listmungerrc.yaml will point to an optional cloud file.
+_listmungerrc.yaml will name the directory for urlified HTML files
+_listmungerrc.yaml will point to one or more successive rule files (instead of defaulting to "global" and "local" rules).
+
+allow:
+- 'localhost'
+- '%.sourceforge.net'
+- '%.freepan.org'
+
+case-insensitive: !ruby/regexp "/George McFly/i" 
+complex: !ruby/regexp "/\\A\"((?:[^\"]|\\\")+)\"/" 
+simple: !ruby/regexp '/a.b/' 
+
+files2dirs:
+- 
+  - 'agendaa'
+  - '~/u/agenda'
+- 
+  - 'agendab'
+  - '~/u/agendab'
+
+sedtxt:
+-
+  - !ruby/regexp   '/~\//'
+  - !ruby/regexp   '/file:\/\/\/Users\/tbaker\//'
+-
+  - !ruby/regexp   '/Volumes/'
+  - !ruby/regexp   '/file:\/\/\/Volumes\//'
+
+sedhtml:
+-
+  - !ruby/regexp   '/\/.html\//'
+  - !ruby/regexp   '/\/</'
+-
+  - !ruby/regexp   '/.index.html</'
+  - !ruby/regexp   '/__</'
+-
+  - !ruby/regexp   '/index.html</'
+  - !ruby/regexp   '/__</'

@@ -1,0 +1,21 @@
+<PRE>
+Title:         index
+Identifier:    <a href="file://file:///Users/tbaker/agit/listmunger/yaml/.index.html">~/agit/listmunger/yaml/.index.html</a>
+Source:        <a href="file://file:///Users/tbaker/agit/listmunger/yaml/index.txt">~/agit/listmunger/yaml/index.txt</a>
+Directory:     <a href="file://file:///Users/tbaker/agit/listmunger/yaml/">~/agit/listmunger/yaml/</a>
+Created:       2012-09-20
+
+_listmungerrc.yaml will point to an optional cloud file.
+    --cloud        cloud         file, contents of which to be prefixed to each urlified HTML file; default 'cloud'
+
+_listmungerrc.yaml will name the directory for urlified HTML files
+    --htmldir      .html         name of directory for urlified HTML files; default '.html'
+
+_listmungerrc.yaml will include settings for files2dirs, sedtxt, and sedhtml
+    --files2dirs   .files2dirs   files with corresponding target directories; default '.files2dirs'
+    --sedtxt       .sedtxt       stream edits for plain text, eg, expanding drive letters to URIs; default '.sedtxt'
+    --sedhtml      .sedhtml      stream edits for urlified HTML, eg, shortening visible pathnames; default '.sedhtml'
+
+_listmungerrc.yaml will point to one or more successive rule files (instead of defaulting to "global" and "local" rules).
+    --globalrules  .globalrules  rules used globally (typically an absolute pathname), processed first; default '.globalrules'
+    --localrules   .rules        rules used locally (typically a relative pathname), processed second; default '.rules'
