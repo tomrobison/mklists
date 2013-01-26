@@ -1,33 +1,9 @@
 #!/bin/bash
-DATA=~/mklists/data
 
-function sym
-{
-    cd $1
-    ~/mklists/shawkle-20130102.py     --cloud           ~/mklists/data/a/always        \
-                                      --files2dirs      ~/mklists/data/a/.f2d          \
-                                      --globalrules     ~/mklists/data/a/.grules       \
-                                      --sedtxt          ~/mklists/data/a/.sedt         \
-                                      --sedhtml         ~/mklists/data/a/.sedh         \
-                                      --localrules      .lrules                  
-}
+~/mklists/shawkle-20130102.py     --cloud           ~/mklists/data/a/always.txt    \
+                                  --files2dirs      ~/mklists/data/a/.f2d          \
+                                  --globalrules     ~/mklists/data/a/.grules       \
+                                  --sedtxt          ~/mklists/data/a/.sedt         \
+                                  --sedhtml         ~/mklists/data/a/.sedh         \
+                                  --localrules      .lrules                  
 
-for DIR in ~/mklists/data/a ~/mklists/data/b ~/mklists/data/c
-do
-    if [ ! -d "$DIR" ]
-    then
-        echo "$DIR is not a directory; exiting..."
-        exit
-    else
-        sym $DIR
-    fi
-done
-
-cd $DATA
-git status
-echo 'Okay to commit?'; read
-
-git add a b c
-git commit -m "Refreshing data directories (data/a data/b data/c)"
-echo cd ~/mklists; cd ~/mklists
-git status

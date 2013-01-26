@@ -1,7 +1,0 @@
-FEATURES http://docs.python.org/2/library/optparse.html
-FEATURES Docs in markdown. 
-FEATURES Logging: 1) screen only, 2) logfile only, 3) both
-FEATURES OO. 
-FEATURES Per-directory config.
-FEATURES UNITTEST http://stackoverflow.com/questions/61151/where-do-the-python-unit-tests-go
-FEATURES Unit tests. 

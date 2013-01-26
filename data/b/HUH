@@ -1,4 +1,0 @@
-ABOUT-GIT Tree Roles     The HEAD - last commit snapshot, next parent (pointer to last commit you made or checked out; parent of next commit)
-ABOUT-GIT Tree Roles     The Index - proposed next commit snapshot: "git commit" looks at this "flattened manifest", not technically a tree
-ABOUT-GIT Tree Roles     The Working Directory - sandbox: where the content of files are placed into actual files so you can edit them
-ABOUT-GIT What is http://progit.org?

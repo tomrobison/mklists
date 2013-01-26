@@ -1,6 +1,0 @@
-TAGLINE 2013-01-01 "Rearranges folders of plain-text lists according to your evolving rules"
-TAGLINE 2013-01-02 "Refreshes folders of plain-text lists to match your evolving rules"
-TAGLINE 2013-01-03 "Synchs folders of plain-text lists to match your evolving rules"
-TAGLINE 2013-01-04 "Tweaks folders of plain-text lists in synch with evolving content rules"
-TAGLINE 2013-01-13 "Refreshes folders of plain-text lists in sync with your evolving rules"
-TAGLINE 2012-12-10 "Rule-driven maintenance of plain-text lists"

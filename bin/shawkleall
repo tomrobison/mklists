@@ -1,0 +1,13 @@
+#!/bin/bash
+for DIR in ~/mklists/data/a ~/mklists/data/b ~/mklists/data/c
+do
+    if [ ! -d "$DIR" ]
+    then
+        echo "$DIR is not a directory; exiting..."
+        exit
+    else
+        cd $DIR
+        shawkle
+    fi
+done
+
