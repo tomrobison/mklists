@@ -14,3 +14,4 @@ data/a/.html/
 *~
 *.swp
 *.swo
+*.pyc

@@ -1,9 +1,11 @@
 import yaml
 
+
 def main():
-    stream = file('Rulefile','r')
+    stream = file('Rulefile', 'r')
     config = yaml.load(stream)
-    print config
+    return config
+
 
 def test():
     return 'success'
